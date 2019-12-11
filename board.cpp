@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include "board.h"
+#include "coord.h"
 
 using namespace std;
 
@@ -38,36 +39,49 @@ void board::print_grid() {
 //    cout << "Possibility :";
 }
 
-void board::input(int input) {
+coord board::inputToCoordinate(int input) {
+    coord c;
     switch (input){
         case 1:
-            grid[2][0] = 'X';
+            c.i = 2;
+            c.j = 0;
             break;
         case 2:
-            grid[2][1] = 'X';
+            grid[2][1] = c;
             break;
         case 3:
-            grid[2][2] = 'X';
+            grid[2][2] = c;
             break;
         case 4:
-            grid[1][0] = 'X';
+            grid[1][0] = c;
             break;
         case 5:
-            grid[1][1] = 'X';
+            grid[1][1] = c;
             break;
         case 6:
-            grid[1][2] = 'X';
+            grid[1][2] = c;
             break;
         case 7:
-            grid[0][0] = 'X';
+            grid[0][0] = c;
             break;
         case 8:
-            grid[0][1] = 'X';
+            grid[0][1] = c;
             break;
         case 9:
-            grid[0][2] = 'X';
+            grid[0][2] = c;
             break;
         default:
             break;
     }
+
+    return coord;
+}
+void board::play(int i, int j) {
+    char c = human ? 'X' : 'O';
+
+}
+
+bool board::isValidPlay() {
+    if (grid[])
+    return false;
 }

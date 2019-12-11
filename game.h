@@ -6,10 +6,11 @@
 class game {
 private:
     int GAME_STATE = 0;
-    board b;
     void tictactoe();
     void turn(int input);
+    bool check_winner();
 public:
+    board b;
     void new_game();
 };
 
